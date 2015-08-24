@@ -16,5 +16,6 @@ To Do List
     - pages/create_todo_item.php - create a single todo item
     - pages/login_template.php - page to log the user in
 - In index.php, load the appropriate page based on the $_GET superglobal key 'current_page'
+
 #### DO NOT spend a lot of time styling them.  You may put in basic bootstrap.  The purpose of this is to get the basic skeleton
 
