@@ -60,13 +60,4 @@ todo_items[
         - This will eventually send data to the server
         - For now it will simply append the data to the existing list
 
-- Make a header.php file
-  - put a menu at the top of index.php
-    - Provide the following links:
-    - If Logged out:
-      - Login - log the user in
-    - If logged in:
-      - View : view todo list
-      - Create: create new todo item
-      - Logout - log the user out
 
