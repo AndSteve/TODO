@@ -37,7 +37,6 @@ To Do list Featuresets
             - title: string - the title of the todo item post
             - dueDate: int - the timestamp of the duedate
             - details: string - the details of the todo item
-            - 
         - output:
             - success: true/false - whether or not the operation was successful
             - data: array - array of todo items
