@@ -1,36 +1,52 @@
 To Do list Featuresets
 
+# TODO 1.1 (Group Project)
 # TODO 1.0 (Group Project)
-- Combine code together to form a group project
-    - Your team master branch will be T&lt;YOUR TEAM NUMBER&gt;_Master
-    - Fork TDL to your github account / clone to your system
-- LOGIN:
-    - add login page
-        - 'username' input: holds the name of the user
-        - 'password' input: holds hte password of the user
-        - 'login' button: triggers the ajax call to the server to log in
-    - AJAX request to server to log in:
-        - request URL: http://s-apis.learningfuze.com/todo/login
-        - input (POST):
-            - username
-            - password
-        - output:
-            - success: true/false - whether or not the login was successful
-            - status:  number - the status of the account (1 is normal user)
-            - email: string - the user's email
-            - lastName: string - the user's last name
-            - firstName: string - the user's first name
-            - id: number - the user's ID number
-            - errors: array - an array of strings, each holding an error that occurred during the login
-- LOGOUT:
-    - add logout button
-    - AJAX request to server to log out:
-        - request URL: http://s-apis.learningfuze.com/todo/logout
+- Tie in list all todo items functionality to server code
+    - request URL: http://s-apis.learningfuze.com/todo/get
         - input (POST):
             - NONE
         - output:
-            - success: true/false - whether or not the login was successful
-            - msgs: string - logout message, if successful
-            - errors: string: error that occurred during the logout
-
-
+            - success: true/false - whether or not the operation was successful
+            - data: array - array of todo items
+                - id: int - ID of the post
+                - userID: int - ID of the post's owner
+                - title: string - the title of the todo post
+                - timeStamp: string - timestamp duedate in the php date format: "Y-m-d g:i:s a"
+                - details: string - the details of the todo item, truncated down to 20 characters
+                - created: string - created date/time in the php date format: "Y-m-d g:i:s a"
+                - complete: int - the complete status of the todo item
+            - errors: string: error that occurred during the operation
+- Tie in list individual todo item functionality to server code
+    - request URL: http://s-apis.learningfuze.com/todo/getByPostId
+        - input (POST):
+            - postID: int - the ID of the post ID to retrieve information for
+        - output:
+            - success: true/false - whether or not the operation was successful
+            - data: array - array of todo items
+                - id: int - ID of the post
+                - userID: int - ID of the post's owner
+                - title: string - the title of the todo post
+                - timeStamp: string - timestamp duedate in the php date format: "Y-m-d g:i:s a"
+                - details: string - the details of the full todo item
+                - created: string - created date/time in the php date format: "Y-m-d g:i:s a"
+                - complete: int - the complete status of the todo item
+            - errors: string: error that occurred during the operation
+- Tie in create todo item functionality
+    - request URL: http://s-apis.learningfuze.com/todo/create
+        - input (POST):
+            - title: string - the title of the todo item post
+            - dueDate: int - the timestamp of the duedate
+            - details: string - the details of the todo item
+            - 
+        - output:
+            - success: true/false - whether or not the operation was successful
+            - data: array - array of todo items
+                - id: int - ID of the post
+                - userID: int - ID of the post's owner
+                - title: string - the title of the todo post
+                - timeStamp: string - timestamp in the php date format: "Y-m-d g:i:s a"
+                - details: string - the details of the full todo item
+                - created: string - created date/time in the php date format: "Y-m-d g:i:s a"
+                - complete: int - the complete status of the todo item
+            - errors: string: error that occurred during the operation
