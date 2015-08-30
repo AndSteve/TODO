@@ -1,7 +1,6 @@
 To Do list Featuresets
 
 # TODO 1.1 (Group Project)
-# TODO 1.0 (Group Project)
 - Tie in list all todo items functionality to server code
     - request URL: http://s-apis.learningfuze.com/todo/get
         - input (POST):
