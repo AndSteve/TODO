@@ -12,4 +12,6 @@ if (isset($_SESSION['user'])) {
         $encoded_results = json_encode($list);
         print_r($encoded_results);
     }
+} else {
+    print("User not found, please log in");
 }
