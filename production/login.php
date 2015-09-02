@@ -9,11 +9,21 @@ $query ="SELECT firstName, lastName, id, softDelete, userLevel FROM GroupUsers W
 $result= mysqli_query($conn, $query);
 if (mysqli_num_rows($result)==1) // if the query to sql matches username and password
 {
-    $output['success']=true;
-    $output['msg']='You have been logged in successfully';
     $user_info=mysqli_fetch_assoc($result);
     $_SESSION['user']=$user_info['id']; // store into session superglobal
+    $_SESSION['username'] = $user_info[$i]['userName'];
+    $_SESSION['user_id'] = $user_info[$i]['id'];
+    $output['success']=true;
+    $output['msg']='You have been logged in successfully';
     $output['user']=$user_info;
+    $output["user_id"] = $user_info[$i]['username'];
+    $output["message"] = "Login Successful";
+    $output["success"] = true;
+    $output['reloads'] =
+        [
+            ['target'=>'.header', 'url'=>'templates/header.php'],
+            ['target'=>'.contents', 'url'=>'pages/landing.php']
+        ];
 }
 
 // json encode output and print
