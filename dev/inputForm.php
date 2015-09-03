@@ -9,6 +9,3 @@
     </select>
     <input type="submit" value="submit">
 </form>
-<!--created-->
-<!--updated-->
-<!--status-->

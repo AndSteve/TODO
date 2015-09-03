@@ -18,7 +18,7 @@ else // if user logged in
     $user = "'".$_SESSION['user']."'";
     $created = CURRENT_TIMESTAMP; // adds datestamp
     $updated = CURRENT_TIMESTAMP; // adds datestamp
-    $status=1;
+    $status=0;
 
 
     $query = "INSERT INTO `GroupTodo` SET `user_id`= $user, `title`= $title, `details`=$details, `created`=$created,
