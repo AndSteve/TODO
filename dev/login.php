@@ -17,7 +17,7 @@ if (isset($_POST['username'])) {
         $output['success'] = true;
         $output['msg'] = 'You have been logged in successfully';
         $output['user'] = $user_info;
-        $output["user_id"] = $user_info['userName'];
+        $output["user_id"] = $user_info['id'];
         $output["message"] = "Login Successful";
         $output["success"] = true;
         $output['reloads'] =
