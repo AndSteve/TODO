@@ -26,4 +26,8 @@ else // if user logged in
     $result= mysqli_query($conn, $query);
     return(mysqli_affected_rows($conn));
 
+    $created = mysqli_affected_rows($conn);
+    $encoded_results = json_encode($created);
+    print_r($encoded_results);
+
 };

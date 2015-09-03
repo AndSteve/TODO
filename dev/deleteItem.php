@@ -5,7 +5,9 @@ print_r($_SESSION['user']);
 if (isset ($_SESSION['user'])== false) // if user not logged in
 {
     print('not logged in');
-    return(isset($_SESSION));
+    $loggedIn = isset($_SESSION);
+    $encoded_results=json_encode($loggedIn);
+    print_r($encoded_results);
 }
 else // if user logged in
 {
@@ -25,7 +27,10 @@ else // if user logged in
 
     $result= mysqli_query($conn, $query);
     return(mysqli_affected_rows($conn));
-    print_r(mysqli_affected_rows($conn));
+
+    $deleted = mysqli_affected_rows($conn);
+    $encoded_results=json_encode($deleted);
+    print_r($encoded_results);
 
 };
 
