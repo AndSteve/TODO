@@ -20,7 +20,7 @@ else // if user logged in
 
     // return false and some message, or template file that will give a message. if feeding back a message, simplest will be alert popup message,
     // function that pups up a modal with a message. can have that as a standard
-// function that adds an error message to a given element - pass back info of a target- can add to each of our rows or inputs, a span that
+// function that adds an errogit r message to a given element - pass back info of a target- can add to each of our rows or inputs, a span that
     // is a container for an error message.
 
     $result= mysqli_query($conn, $query);
@@ -28,11 +28,6 @@ else // if user logged in
     print_r(mysqli_affected_rows($conn));
 
 };
-
-
-?>
-
-
 
 
 ?>
