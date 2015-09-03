@@ -28,7 +28,6 @@ if (isset($_POST['username'])) {
                 ['target' => '.contents', 'url' => 'pages/landing.php']
             ];
     }
-    // json encode output and print
     $json_output = json_encode($output);
     print($json_output);
 };
