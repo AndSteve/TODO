@@ -16,7 +16,7 @@ if (mysqli_num_rows($result)==1) // if the query to sql matches username and pas
     $output['success']=true;
     $output['msg']='You have been logged in successfully';
     $output['user']=$user_info;
-    $output["user_id"] = $user_info['username'];
+    $output["user_id"] = $user_info['userName'];
     $output["message"] = "Login Successful";
     $output["success"] = true;
     $output['reloads'] =
