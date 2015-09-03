@@ -1,4 +1,6 @@
 <?php
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: GET, POST');
 //This file is used for logging into the user database @ myFirst_DB >> GroupUsers
 session_start();
 require('mysql_connect.php');
