@@ -5,7 +5,7 @@ require('mysql_connect.php');
 $userName = $_POST['username'];
 $passWord = sha1($_POST['password']);
 $output = ['success'=>false, 'msg'=>'Username or Password incorrect, please try again'];
-$query ="SELECT firstName, lastName, id, softDelete, userLevel FROM GroupUsers WHERE `userName`='$userName' AND `password`='$passWord'"; //check username / pw against database
+$query ="SELECT firstName, lastName, userName, id, status, userLevel FROM GroupUsers WHERE `userName`='$userName' AND `password`='$passWord'"; //check username / pw against database
 $result= mysqli_query($conn, $query);
 if (mysqli_num_rows($result)==1) // if the query to sql matches username and password
 {
